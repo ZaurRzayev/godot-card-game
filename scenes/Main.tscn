@@ -1,0 +1,73 @@
+[gd_scene load_steps=2 format=3 uid="uid://cbt746k3ugt4t"]
+
+[ext_resource type="Script" uid="uid://daijxja66ghe6" path="res://scripts/GameManager.gd" id="2_rvslj"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("2_rvslj")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="PlayerArea" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 3.0
+offset_top = 433.0
+offset_right = 43.0
+offset_bottom = 473.0
+
+[node name="HandContainer" type="HBoxContainer" parent="UI/PlayerArea"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="InfoContainer" type="HBoxContainer" parent="UI/PlayerArea"]
+layout_mode = 0
+offset_left = 893.0
+offset_top = -106.0
+offset_right = 1053.0
+offset_bottom = -66.0
+
+[node name="HPLabel" type="Label" parent="UI/PlayerArea/InfoContainer"]
+layout_mode = 2
+text = "PLayer HP: 30"
+
+[node name="SkillLabel" type="Label" parent="UI/PlayerArea/InfoContainer"]
+layout_mode = 2
+text = "Skill: 0"
+
+[node name="EndTurnButton" type="Button" parent="UI/PlayerArea"]
+layout_mode = 0
+offset_left = 1066.0
+offset_top = -104.0
+offset_right = 1144.0
+offset_bottom = -73.0
+text = "End Turn"
+
+[node name="AIArea" type="Control" parent="UI"]
+layout_mode = 3
+anchor_bottom = 0.002
+offset_top = 1.0
+offset_right = 40.0
+offset_bottom = 38.704
+
+[node name="AIHandContainer" type="HBoxContainer" parent="UI/AIArea"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="AIInfoContainer" type="HBoxContainer" parent="UI/AIArea"]
+offset_left = 895.0
+offset_top = 232.0
+offset_right = 1018.0
+offset_bottom = 272.0
+
+[node name="AI_HPLabel" type="Label" parent="UI/AIArea/AIInfoContainer"]
+layout_mode = 2
+text = "AI HP: 30"
+
+[node name="AI_SkillLabel" type="Label" parent="UI/AIArea/AIInfoContainer"]
+layout_mode = 2
+text = "Skill: 0"
+
+[node name="GameManager" type="Node" parent="."]
